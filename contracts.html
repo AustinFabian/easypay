@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <nav>
+          <p>Easypay</p>
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a class="active" href="contracts.html">Contracts</a></li>
+            <li><a href="./transactions.html">Transactions</a></li>
+            <li><a href="">Disputes</a></li>
+          </ul>
+        </nav>
+        <div class="profile">
+          <i class="fa fa-cog" aria-hidden="true"></i>
+          <i class="fa fa-bell-o" aria-hidden="true"></i>
+          <img src="./img/user.jpeg" alt="" />
+        </div>
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </div>
+      <div class="body">
+        <div class="welcome">
+          <p>
+            Welcome Back, Clinton <br />
+            <span>Track,manage and create contracts</span>
+          </p>
+          <button class="button-bg-purple">
+            <i class="fa fa-plus" aria-hidden="true"></i> Create Contract
+          </button>
+        </div>
+        <div class="contracts">
+          <div>
+            <div>
+              <p>Total Contracts</p>
+              <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+            </div>
+            <p>2,420</p>
+          </div>
+          <div>
+            <div>
+              <p>Completed Contracts</p>
+              <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+            </div>
+            <p>2,210</p>
+          </div>
+          <div>
+            <div>
+              <p>Active Contracts</p>
+              <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+            </div>
+            <p>316</p>
+          </div>
+        </div>
+        <div class="forSearch">
+          <div class="buttons">
+            <div>
+              <button class="button-fa-times">
+                <i>All time</i> <i class="fa fa-times" aria-hidden="true"></i>
+              </button>
+              <button class="button-fa-times">
+                <i>US, AU, +4</i> <i class="fa fa-times" aria-hidden="true"></i>
+              </button>
+            </div>
+            <button class="button-fa-times white">
+              <i class="fa fa-bars" aria-hidden="true"></i> <i>More Filters</i>
+            </button>
+          </div>
+
+          <div class="search">
+            <i class="fa fa-search" aria-hidden="true"> <span>Search</span></i>
+            <input type="search" class="" placeholder="" aria-controls="myDataTable">
+          </div>
+        </div>
+        <div class="overFlow">
+          <table class="display" id="myDataTable">
+            <thead>
+              <tr>
+                <th><span><i class="fa fa-minus-square-o" aria-hidden="true"></i>Title</span></th>
+                <th>Created by</th>
+                <th>Budget</th>
+                <th>Status</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span><input type="checkbox"> Tall gate renovation</span></td>
+                <td><img src="./img/user.jpeg" alt="" /></td>
+                <td>-$18.99</td>
+                <td><span class="completed">Completed</span></td>
+                <td><i class="fa fa-trash-o" aria-hidden="true"></i> <i class="fa fa-pencil" aria-hidden="true"></i></td>
+              </tr>
+              <tr>
+                <td><span><input type="checkbox"> Tall gate renovation</span></td>
+                <td><img src="./img/user.jpeg" alt="" /></td>
+                <td><span class="plus">+$18.99</span></td>
+                <td><span class="active">Active</span></td>
+                <td><i class="fa fa-trash-o" aria-hidden="true"></i> <i class="fa fa-pencil" aria-hidden="true"></i></td>
+              </tr>
+              <tr>
+                <td><span><input type="checkbox"> Land Purchases</span></td>
+                <td><img src="./img/user.jpeg" alt="" /></td>
+                <td>-$18.99</td>
+                <td><span class="pending">Pending</span></td>
+                <td><i class="fa fa-trash-o" aria-hidden="true"></i> <i class="fa fa-pencil" aria-hidden="true"></i></td>
+              </tr>
+              <tr>
+                <td><span><input type="checkbox"> Design Software</span></td>
+                <td><img src="./img/user.jpeg" alt="" /></td>
+                <td>-$18.99</td>
+                <td><span class="active">Active</span></td>
+                <td><i class="fa fa-trash-o" aria-hidden="true"></i> <i class="fa fa-pencil" aria-hidden="true"></i></td>
+              </tr>
+              <tr>
+                <td><span><input type="checkbox"> Design Software</span></td>
+                <td><img src="./img/user.jpeg" alt="" /></td>
+                <td><span class="plus">+$18.99</span></td>
+                <td><span class="active">Active</span></td>
+                <td><i class="fa fa-trash-o" aria-hidden="true"></i> <i class="fa fa-pencil" aria-hidden="true"></i></td>
+              </tr>
+              <tr>
+                <td><span><input type="checkbox"> Design Software</span></td>
+                <td><img src="./img/user.jpeg" alt="" /></td>
+                <td><span class="plus">+$18.99</span></td>
+                <td><span class="completed">Completed</span></td>
+                <td><i class="fa fa-trash-o" aria-hidden="true"></i> <i class="fa fa-pencil" aria-hidden="true"></i></td>
+              </tr>
+              <tr>
+                <td><span><input type="checkbox"> Design Software</span></td>
+                <td><img src="./img/user.jpeg" alt="" /></td>
+                <td><span class="plus">+$18.99</span></td>
+                <td><span class="completed">Completed</span></td>
+                <td><i class="fa fa-trash-o" aria-hidden="true"></i> <i class="fa fa-pencil" aria-hidden="true"></i></td>
+              </tr>
+              <tr>
+                <td><span><input type="checkbox"> Design Software</span></td>
+                <td><img src="./img/user.jpeg" alt="" /></td>
+                <td>-$18.99</td>
+                <td><span class="pending">Pending</span></td>
+                <td><i class="fa fa-trash-o" aria-hidden="true"></i> <i class="fa fa-pencil" aria-hidden="true"></i></td>
+              </tr>
+              <tr>
+                <td><span><input type="checkbox"> Design Software</span></td>
+                <td><img src="./img/user.jpeg" alt="" /></td>
+                <td><span class="plus">+$18.99</span></td>
+                <td><span class="completed">Completed</span></td>
+                <td><i class="fa fa-trash-o" aria-hidden="true"></i> <i class="fa fa-pencil" aria-hidden="true"></i></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+  <script src="./script.js"></script>
+</html>
