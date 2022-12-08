@@ -422,7 +422,7 @@ span.completed {
   flex-grow: 1;
 }
 
-.body .frame div:nth-child(1) {
+.body .frame > div:nth-child(1) {
   height: 114px;
   width: 406px;
   display: flex;
@@ -430,7 +430,7 @@ span.completed {
   font-size: 14px;
 }
 
-.body .frame div:nth-child(2) {
+.body .frame > div:nth-child(2) {
   width: 61%;
 }
 
@@ -468,7 +468,11 @@ span.completed {
   height: 44px;
 }
 
-.body .frame div:nth-child(2) form label:nth-child(2) textarea, form .upload p{
+form .upload p{
+  min-height: 20px;
+}
+
+.body .frame div:nth-child(2) form label:nth-child(2) textarea{
   height: 128px;
 }
 
@@ -478,6 +482,7 @@ span.completed {
 }
 
 form .upload p{
+  min-height: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -495,6 +500,32 @@ form .upload p span i{
 
 form .upload p span span{
   font-size: 12px;
+}
+
+form .divs3{
+  min-height: 20px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+form .divs3 > *{
+  min-height: 60px;
+  border: 1px solid #D0D5DD;
+  width: 100%;
+  padding: 16px;
+  display: flex;
+  gap: 20px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+form .divs3 > * i{
+  color: #CE00B4;
+}
+
+form .divs3 > * p:nth-child(2){
+  font-family: helixRegular;
 }
 
 /* Media Query css */
