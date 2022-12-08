@@ -478,7 +478,25 @@ span.completed {
   font-size: 14px;
 }
 
+form .upload p{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 
+form .upload p span{
+  line-height: 30px;
+}
+
+form .upload p span i{
+  color: #CE00B4;
+}
+
+form .upload p span span{
+  font-size: 12px;
+}
 
 /* Media Query css */
 
