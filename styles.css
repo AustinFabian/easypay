@@ -20,7 +20,7 @@
   font-family: helixMedium;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   display: none;
 }
 
@@ -28,7 +28,7 @@
   min-height: 100vh;
 }
 
-.container > *{
+.container > * {
   padding-left: 96px;
   padding-right: 96px;
 }
@@ -90,11 +90,11 @@ a.active {
   border-radius: 100%;
 }
 
-.back{
+.back {
   padding-top: 20px;
 }
 
-.back span{
+.back span {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -107,9 +107,9 @@ a.active {
   gap: 32px;
 }
 
-.contracts2 .body .welcome{
+.contracts2 .body .welcome {
   padding-bottom: 30px;
-  border-bottom: 2px solid #EAECF0;
+  border-bottom: 2px solid #eaecf0;
 }
 
 .welcome {
@@ -180,6 +180,10 @@ a.active {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.dispute .forSearch {
+  justify-content: flex-end;
 }
 
 .forSearch .buttons {
@@ -350,7 +354,7 @@ span.completed {
 
 /* contracts2 styling*/
 
-.contractors{
+.contractors {
   width: 60%;
   min-height: 200px;
   margin: 0 auto;
@@ -361,46 +365,119 @@ span.completed {
   gap: 30px;
 }
 
-.contractors > *{
+.contractors > * {
   flex-grow: 1;
   flex-basis: 40%;
   min-height: 70px;
   /* border: 2px solid black; */
 }
 
-.contractors div:nth-child(5),.contractors div:nth-child(6){
+.contractors div:nth-child(5),
+.contractors div:nth-child(6) {
   flex-basis: 100%;
 }
 
-.contractors > * > p:nth-child(1){
+.contractors > * > p:nth-child(1) {
   font-family: helixSemiBold;
   font-weight: bold;
   font-size: 20px;
 }
 
-.contractors > div:last-child{
+.contractors > div:last-child {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 30px;
 }
 
-.contractors > div:last-child span{
+.contractors > div:last-child span {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
 }
 
-.contractors div:last-child > div{
+.contractors div:last-child > div {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
 }
 
-.contractors div:last-child > div > div{
+.contractors div:last-child > div > div {
   flex-grow: 1;
 }
+
+/* frame40138 styling */
+
+.body .frame {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: space-between;
+}
+
+.body .frame > * {
+  border: 2px solid black;
+  border-radius: 12px;
+  padding: 16px;
+  flex-grow: 1;
+}
+
+.body .frame div:nth-child(1) {
+  height: 114px;
+  width: 406px;
+  display: flex;
+  gap: 15px;
+  font-size: 14px;
+}
+
+.body .frame div:nth-child(2) {
+  width: 61%;
+}
+
+.body .frame div:nth-child(1) img {
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+}
+
+.body .frame div:nth-child(1) div p:nth-child(1) {
+  font-family: helixSemiBold;
+}
+
+.body .frame div:nth-child(2) form{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.body .frame div:nth-child(2) form label{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.body .frame div:nth-child(2) form label input,.body .frame div:nth-child(2) form label textarea,form .upload p{
+  border-radius: 8px;
+  padding: 10px 14px;
+  outline: none;
+  border: 1px solid #D0D5DD;
+  resize: none;
+}
+
+.body .frame div:nth-child(2) form label:nth-child(1) input{
+  height: 44px;
+}
+
+.body .frame div:nth-child(2) form label:nth-child(2) textarea, form .upload p{
+  height: 128px;
+}
+
+.body .frame div:nth-child(2) form span{
+  color: #475467;
+  font-size: 14px;
+}
+
 
 
 /* Media Query css */
@@ -422,7 +499,7 @@ span.completed {
     padding: 48px 20px;
   }
 
-  .container > *{
+  .container > * {
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -455,13 +532,21 @@ span.completed {
     padding: 2px 8px 2px 10px;
   }
 
-  .contractors{
+  .contractors {
+    width: 100%;
+  }
+
+  .dispute .forSearch {
+    padding-top: 80px;
+  }
+
+  .body .frame div:nth-child(1){
     width: 100%;
   }
 }
 
-@media (max-width: 412px){
-  .contractors > *{
+@media (max-width: 412px) {
+  .contractors > * {
     flex-basis: 100%;
   }
 }
