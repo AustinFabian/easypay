@@ -52,9 +52,8 @@
   align-items: center;
 }
 
-.header nav p {
-  font-family: helixSemiBold;
-  font-size: 25px;
+.header nav img {
+  width: 120px;
 }
 
 .header nav ul {
