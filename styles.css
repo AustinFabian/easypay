@@ -620,6 +620,53 @@ input[type="submit"] {
   color: white;
 }
 
+.fade1{
+  height: 38px;
+  width: 40px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fade2{
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fade2 .fa{
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.bg-purple1{
+  background: #fbe6f8;
+}
+
+.bg-purple2{
+  background: #f5ccf0;
+}
+
+.bg-grey1{
+  background: #f9fafb;
+}
+
+.bg-grey2{
+  background: #f2f4f7;
+}
+
+form .divs3 > * i.trash{
+  color: black;
+}
+
+.bg-grey1 .fa{
+  color: black;
+}
+
 /* Media Query css */
 
 @media (max-width: 952px) {
