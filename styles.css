@@ -721,6 +721,19 @@ div.circle p{
   background: #EAECF0;
   border-radius: 8px;
   flex-grow: 1;
+  margin-bottom: 5px;
+}
+
+.frame40139 .column div:nth-last-child(2), .frame40139 .column div:nth-last-child(2) .circle .fa{
+  color: #9B0087;
+}
+
+.frame40139 .column div:nth-last-child(1) .circle .fa{
+  color: #9B0087;
+}
+
+.frame40139 .column div:nth-last-child(1) .circle p{
+  background: #9B0087;
 }
 
 /* Media Query css */
