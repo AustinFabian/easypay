@@ -16,12 +16,830 @@ a {
   text-decoration: none;
 }
 
+@font-face {
+  font-family: helixMedium;
+  src: url(./fonts/Hellix-Medium.ttf);
+}
+
+@font-face {
+  font-family: helixRegular;
+  src: url(./fonts/Hellix-Regular.ttf);
+}
+
+@font-face {
+  font-family: helixSemiBold;
+  src: url(./fonts/Hellix-SemiBold.ttf);
+}
+
 * {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
-  font-family: "Hellix";
+  font-family: helixMedium;
   transition: 0.5s all;
   font-weight: 300;
 }
+
+.dashboard ::-webkit-scrollbar {
+  display: none;
+}
+
+.dashboard {
+  min-height: 100vh;
+}
+
+.dashboard > * {
+  padding-left: 96px;
+  padding-right: 96px;
+}
+
+.dashboard .header {
+  min-height: 73px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 96px;
+  border-bottom: 1px solid #eaecf0;
+}
+
+.dashboard .header i:last-child {
+  display: none;
+}
+
+.dashboard .header nav {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.dashboard .header nav img {
+  width: 120px;
+}
+
+.dashboard .header nav ul {
+  display: flex;
+  list-style-type: none;
+  gap: 16px;
+}
+
+.dashboard .header nav ul li a {
+  text-decoration: none;
+  color: black;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.dashboard a.active {
+  background: #feddfa;
+}
+
+.dashboard .profile {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.dashboard .fa {
+  font-size: 20px;
+}
+
+.dashboard .profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+
+.dashboard .back {
+  padding-top: 20px;
+}
+
+.dashboard .back span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dashboard .body {
+  padding: 48px 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.dashboard .contracts2 .body .welcome {
+  padding-bottom: 30px;
+  border-bottom: 2px solid #eaecf0;
+}
+
+.dashboard .welcome {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.dashboard .welcome p {
+  font-size: 30px;
+}
+
+.dashboard .button-bg-purple {
+  background: #ce00b4;
+  color: #fff;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  padding: 15px 16px;
+  border-radius: 8px;
+}
+
+.dashboard .welcome p span {
+  font-size: 16px;
+  color: #475467;
+}
+
+.dashboard .contracts {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.dashboard .contracts > * {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 370px;
+  height: 140px;
+  border: 1px solid #030543;
+  box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.1),
+    0px 1px 2px rgba(16, 24, 40, 0.06);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.dashboard .contracts > * > p {
+  font-family: helixSemiBold;
+  font-size: 36px;
+}
+
+.dashboard .contracts > * > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dashboard .contracts > * > div .fa {
+  color: #98a2b3;
+}
+
+.dashboard .forSearch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dashboard .dispute .forSearch {
+  justify-content: flex-end;
+}
+
+.dashboard .forSearch .buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.dashboard .forSearch .buttons div .button-fa-times,
+.dashboard .button-fa-times {
+  background: #fbe6f8;
+  border: 1px solid #fbe6f8;
+  border-radius: 8px;
+  padding: 10px 16px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  gap: 10px;
+  color: #ce00b4;
+}
+
+.dashboard .forSearch .buttons .white {
+  background: none;
+  border: 1px solid #030543;
+  color: #344054;
+}
+
+.dashboard .forSearch .buttons div {
+  display: flex;
+  gap: 14px;
+}
+
+.dashboard .forSearch .search {
+  width: 25%;
+}
+
+.dashboard .search .fa {
+  position: absolute;
+  padding: 12px;
+  font-size: 20px;
+}
+
+.dashboard .search .fa span {
+  font-family: helixRegular;
+  font-size: 16px;
+}
+
+.dashboard .search input {
+  width: 100%;
+  height: 44px;
+  padding: 10px;
+  background: #ffffff;
+  border: 1px solid #030543;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 8px;
+  outline: none;
+  text-align: center;
+}
+
+.dashboard .overFlow {
+  height: 612px;
+  width: clamp(100%);
+  overflow: scroll;
+}
+
+.dashboard table {
+  border: 1px solid #030543;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.dashboard table img {
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+}
+
+.dashboard table.dataTable thead > tr > th.sorting:before,
+.dashboard table.dataTable thead > tr > th.sorting_asc:before,
+.dashboard table.dataTable thead > tr > th.sorting:after,
+.dashboard table.dataTable thead > tr > th.sorting_asc:after {
+  display: none;
+}
+
+.dashboard .overFlow .display thead tr th {
+  padding: 12px 24px;
+}
+
+.dashboard .overFlow .display tbody tr td {
+  height: 72px;
+  padding: 0 24px;
+}
+
+.dashboard .overFlow .display thead tr th:nth-child(1),
+.dashboard .overFlow .display tbody tr td:nth-child(1) {
+  width: 341px;
+}
+
+.dashboard .overFlow .display thead tr th:nth-child(1) span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dashboard .overFlow .display thead tr th:nth-child(1) span i {
+  color: #ce00b4;
+}
+
+.dashboard .overFlow .display tbody tr td:nth-child(1) span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dashboard
+  .overFlow
+  .display
+  tbody
+  tr
+  td:nth-child(1)
+  span
+  input[type="checkbox"] {
+  accent-color: #ce00b4;
+  width: 15px;
+  height: 15px;
+}
+
+.dashboard span.plus {
+  color: #039855;
+}
+
+.dashboard span.active,
+.dashboard span.completed,
+.dashboard span.pending {
+  padding: 2px 5px;
+  border: 1px solid;
+  border-radius: 10px;
+  font-size: 12px;
+  font-family: helixSemibold;
+}
+
+.dashboard span.active {
+  border-color: #175cd3;
+  color: #175cd3;
+}
+
+.dashboard span.completed {
+  color: #027a48;
+  border-color: #027a48;
+}
+
+.dashboard .overFlow .display thead tr th:nth-child(2) {
+  width: 155px;
+}
+
+.dashboard .overFlow .display thead tr th:nth-child(3) {
+  width: 236px;
+}
+
+.dashboard .overFlow .display thead tr th:nth-child(4) {
+  width: 241px;
+}
+
+.dashboard .overFlow .display thead tr th:nth-child(5) {
+  width: 206px;
+}
+
+.dashboard .overFlow .display tbody tr td:nth-child(5) {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* contracts2 styling*/
+
+.dashboard .contractors {
+  width: 60%;
+  min-height: 200px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #ce00b4;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.dashboard .contractors > * {
+  flex-grow: 1;
+  flex-basis: 40%;
+  min-height: 70px;
+  /* border: 2px solid black; */
+}
+
+.dashboard .contractors div:nth-child(5),
+.dashboard .contractors div:nth-child(6) {
+  flex-basis: 100%;
+}
+
+.dashboard .contractors > * > p:nth-child(1) {
+  font-family: helixSemiBold;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.dashboard .contractors > div:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.dashboard .contractors > div:last-child span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.dashboard .contractors div:last-child > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.dashboard .contractors div:last-child > div > div {
+  flex-grow: 1;
+}
+
+/* frame40138 styling */
+
+.dashboard .body .frame {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: space-between;
+}
+
+.dashboard .body .frame > * {
+  border: 1px solid black;
+  border-radius: 12px;
+  padding: 16px;
+  flex-grow: 1;
+}
+
+.dashboard .body .frame > div:nth-child(1) {
+  height: 116px;
+  width: 406px;
+  display: flex;
+  gap: 15px;
+  font-size: 14px;
+}
+
+.dashboard .body .frame > div:nth-child(2) {
+  width: 59%;
+}
+
+.dashboard .body .frame div:nth-child(1) img {
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+}
+
+.dashboard .body .frame > div:nth-child(1) div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.dashboard .body .frame div:nth-child(1) div p:nth-child(1) {
+  font-family: helixSemiBold;
+}
+
+.dashboard .body .frame div:nth-child(1) div p:nth-child(2),
+.dashboard .body .frame div:nth-child(1) div p:nth-child(3),
+.dashboard .body .frame div:nth-child(1) div p:nth-child(4) {
+  font-family: helixRegular;
+}
+
+.dashboard .body .frame div:nth-child(1) div p:nth-child(4) span {
+  padding: 5px;
+  color: #175cd3;
+  background: #effaff;
+  border-radius: 8px;
+}
+
+.dashboard .body .frame div:nth-child(2) form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.dashboard .body .frame div:nth-child(2) form label {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dashboard .body .frame div:nth-child(2) form label input,
+.dashboard .body .frame div:nth-child(2) form label textarea,
+.dashboard form .upload p {
+  border-radius: 8px;
+  padding: 10px 14px;
+  outline: none;
+  border: 1px solid #d0d5dd;
+  resize: none;
+}
+
+.dashboard .body .frame div:nth-child(2) form label:nth-child(1) input {
+  height: 44px;
+}
+
+.dashboard form .upload p {
+  min-height: 20px;
+}
+
+.dashboard .body .frame div:nth-child(2) form label:nth-child(2) textarea {
+  height: 128px;
+}
+
+.dashboard .body .frame div:nth-child(2) form span {
+  color: #475467;
+  font-size: 14px;
+}
+
+.dashboard form .upload p {
+  min-height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.dashboard form .upload p span {
+  line-height: 30px;
+}
+
+.dashboard form .upload p span i {
+  color: #ce00b4;
+}
+
+.dashboard form .upload p span span {
+  font-size: 12px;
+}
+
+.dashboard form .divs3 {
+  min-height: 20px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.dashboard form .divs3 > * {
+  min-height: 60px;
+  border: 1px solid #d0d5dd;
+  width: 100%;
+  padding: 16px;
+  display: flex;
+  gap: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.dashboard form .divs3 > div:nth-child(1) {
+  border-color: #ce00b4;
+}
+
+.dashboard form .divs3 > * i {
+  color: #ce00b4;
+}
+
+.dashboard form .divs3 > * p:nth-child(2) {
+  font-family: helixRegular;
+}
+
+.dashboard form .divs3 > * > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dashboard form .divs3 > * div .lineDiv .line {
+  height: 8px;
+  width: 100%;
+  background: lightgrey;
+  position: relative;
+  border-radius: 8px;
+}
+
+.dashboard form .divs3 > * div .lineDiv .line:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #ce00b4;
+  border-radius: 8px;
+}
+
+.dashboard .line1:before {
+  width: 100%;
+}
+
+.dashboard .line2:before {
+  width: 40%;
+}
+
+.dashboard .line3:before {
+  width: 80%;
+}
+
+.dashboard .lineDiv {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dashboard form .divs3 > * > div p:nth-child(1) {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dashboard .button {
+  border-top: 1px solid #d0d5dd;
+  min-height: 60px;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.dashboard input[type="submit"] {
+  width: 80px;
+  height: 40px;
+  background: #9b0087;
+  border: 1px solid #9b0087;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 8px;
+  color: white;
+}
+
+.dashboard .fade1 {
+  height: 38px;
+  width: 40px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashboard .fade2 {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashboard .fade2 .fa {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.dashboard .bg-purple1 {
+  background: #fbe6f8;
+}
+
+.dashboard .bg-purple2 {
+  background: #f5ccf0;
+}
+
+.dashboard .bg-grey1 {
+  background: #f9fafb;
+}
+
+.dashboard .bg-grey2 {
+  background: #f2f4f7;
+}
+
+.dashboard form .divs3 > * i.trash {
+  color: black;
+}
+
+.dashboard .bg-grey1 .fa {
+  color: black;
+}
+
+/* frame40139 styling */
+.frame40139 .body .frame > div:nth-child(1) {
+  width: 700px;
+}
+
+.frame40139 .body .frame > div:nth-child(2) {
+  width: 30%;
+}
+
+.frame40139 .body .frame > div:nth-child(2) > p:nth-child(1) {
+  padding-top: 10px;
+  font-size: helixSemiBold;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.dashboard .column {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard .dispute {
+  line-height: 28px;
+}
+
+.dashboard .dispute span {
+  font-weight: bold;
+}
+
+.dashboard div.row {
+  display: flex;
+  gap: 20px;
+}
+
+.dashboard div.circle {
+  min-height: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.dashboard div.circle i {
+  font-size: 25px;
+  color: #eaecf0;
+}
+
+.dashboard div.circle p {
+  height: 10px;
+  width: 2px;
+  background: #eaecf0;
+  border-radius: 8px;
+  flex-grow: 1;
+  margin-bottom: 5px;
+}
+
+.frame40139 .column div:nth-last-child(2),
+.frame40139 .column div:nth-last-child(2) .circle .fa {
+  color: #9b0087;
+}
+
+.frame40139 .column div:nth-last-child(1) .circle .fa {
+  color: #9b0087;
+}
+
+.frame40139 .column div:nth-last-child(1) .circle p {
+  background: #9b0087;
+}
+
+/* Media Query css */
+
+@media (max-width: 952px) {
+  .dashboard .header {
+    padding: 0 20px;
+  }
+
+  .dashboard .profile {
+    display: none;
+  }
+
+  .dashboard .header i:last-child {
+    display: block;
+  }
+
+  .dashboard .body {
+    padding: 48px 20px;
+  }
+
+  .dashboard > * {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .dashboard .header nav ul {
+    display: none;
+  }
+
+  .dashboard .contracts > * {
+    flex-grow: 1;
+  }
+
+  .dashboard .forSearch {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+
+  .dashboard .buttons {
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .dashboard .forSearch .search {
+    width: 100%;
+  }
+
+  .dashboard .forSearch .buttons div .button-fa-times {
+    height: 24px;
+    padding: 2px 8px 2px 10px;
+  }
+
+  .dashboard .contractors {
+    width: 100%;
+  }
+
+  .dashboard .dispute .forSearch {
+    padding-top: 80px;
+  }
+
+  .dashboard .body .frame > div:nth-child(1) {
+    width: 100%;
+  }
+
+  .dashboard .body .frame > div:nth-child(2) {
+    border: none;
+  }
+}
+
+@media (max-width: 412px) {
+  .dashboard .contractors > * {
+    flex-basis: 100%;
+  }
+}
+
 
 body {
   margin: 0px;
@@ -32,8 +850,7 @@ body {
   color: var(--primary-color);
 }
 .container {
-  max-width: 80%;
-  margin: 30px auto;
+  margin: auto;
   color: rgb(8, 8, 70);
   font-size: 18px;
 }
